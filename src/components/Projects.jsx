@@ -172,7 +172,7 @@ const Projects = () => {
 
       <div class="container">
         <motion.p class="mt-3 text-secondary fs-5">
-          This is a paragraph about how my projects showcase my skills and experience through real-world examples of my work.
+          This is a sentence about how my projects showcase my skills and experience through real-world examples of my work.
         </motion.p>
       </div>
 
