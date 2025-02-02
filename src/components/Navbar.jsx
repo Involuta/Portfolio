@@ -1,3 +1,5 @@
+import { SectionWrapper } from '../hoc'
+
 const Navbar = () => {
   return (
     <p>
@@ -6,4 +8,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default SectionWrapper(Navbar, '')
