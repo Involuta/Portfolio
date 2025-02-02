@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Navbar, Projects } from './components'
+
 import './App.css'
 
 function App() {
@@ -10,7 +12,6 @@ function App() {
         <Navbar />
       </div>
       <Projects />
-      <StarsCanvas />
     </div>
   )
 }

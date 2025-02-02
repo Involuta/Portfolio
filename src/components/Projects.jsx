@@ -1,3 +1,4 @@
+/*
 import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
@@ -113,4 +114,76 @@ const Projects = () => {
   )
 }
 
-export default SectionWrapper(Works, '')
+//export default SectionWrapper(Works, '')
+export default Projects
+*/
+
+import { Tilt } from 'react-tilt'
+import { motion } from 'framer-motion'
+// import { styles } from '../styles'
+// import { github } from '../assets'
+import { SectionWrapper } from '../hoc'
+import { projects } from '../constants'
+// import { fadeIn, textVariant } from '../utils/motion'
+
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => (
+  <motion.div>
+    <div className="card bg-dark text-white border-0 rounded-3 shadow-sm" style={{ width: '22rem' }}>
+      <div className="position-relative">
+        <img src={image} alt={name} className="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
+        <div className="position-absolute top-0 end-0 m-3">
+          <div
+            onClick={() => window.open(source_code_link, '_blank')}
+            className="bg-black text-white d-flex justify-content-center align-items-center rounded-circle"
+            style={{ width: '40px', height: '40px', cursor: 'pointer' }}
+          >
+            <img src={github} alt="github" style={{ width: '50%', height: '50%' }} />
+          </div>
+        </div>
+      </div>
+
+      <div className="card-body">
+        <h5 className="fw-bold">{name}</h5>
+        <p className="text-secondary">{description}</p>
+      </div>
+
+      <div className="card-footer bg-transparent border-0">
+        <div className="d-flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span key={tag.name} className={`badge ${tag.color}`}>
+              #{tag.name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </motion.div>
+)
+
+const Projects = () => {
+  return (
+    <>
+      <motion.div>
+        <p className="text-muted">My work</p>
+        <h2 className="fw-bold">Projects</h2>
+      </motion.div>
+
+      <div className="container">
+        <motion.p className="mt-3 text-secondary fs-5">
+          This is a paragraph about how my projects showcase my skills and experience through real-world examples of my work.
+        </motion.p>
+      </div>
+    </>
+  )
+}
+
+/*
+<div className="row mt-5">
+  {projects.map((project, index) => (
+    <div key={`project-${index}`} className="col-lg-4 col-md-6 mb-4">
+      <ProjectCard index={index} {...project} />
+    </div>
+  ))}
+</div>
+*/
+export default Projects
