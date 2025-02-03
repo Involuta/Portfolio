@@ -19,7 +19,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li key={link.id} className="nav-item">
               <a
-                href={`#${link.id}`}
+                href={`${link.id}`}
                 className={`nav-link ${
                   active === link.title ? "text-white fw-bold" : "text-secondary fw-normal"
                 }`}

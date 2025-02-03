@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from "react";
 
 const RandomImage = () => {
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState("")
+  const [imageAlt, setImageAlt] = useState("")
 
   const fetchImage = async () => {
     const response = await fetch("https://api.unsplash.com/photos/random?client_id=fU8TlbPbAok05eTaawq4qZgU7NlrCmafc4qaY2TM9ZU")
@@ -11,6 +12,7 @@ const RandomImage = () => {
         console.log(response)       // Logs the entire JSON
         console.log(response.urls.regular) // Logs the image URL
         setImageUrl(response.urls.regular)
+        setImageAlt(response.alt_description)
       })
       .catch(error => console.error("Error fetching data:", error));
   };
@@ -20,11 +22,16 @@ const RandomImage = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Random Image</h2>
-      {imageUrl && <img src={imageUrl} alt="Random" width="500" />}
-      <br />
-      <button onClick={fetchImage}>Get New Image</button>
+    <div className='container-fluid'>
+      <div className="row align-items-center">
+        <div className='col'>
+          <h2 className=''>Random Image</h2>
+          <button className='' onClick={fetchImage}>Get New Image</button>
+        </div>
+        <div className='col'>
+          {imageUrl && <img src={imageUrl} alt={imageAlt} width="300" />}
+        </div>
+      </div>
     </div>
   );
 };
