@@ -1,3 +1,5 @@
+import { SectionWrapper } from '../hoc'
+
 const NoPage = () => {
   return (
     <h1>
@@ -6,4 +8,4 @@ const NoPage = () => {
   )
 }
 
-export default NoPage
+export default SectionWrapper(NoPage, '')
