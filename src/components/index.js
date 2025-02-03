@@ -1,13 +1,13 @@
 import Navbar from './Navbar'
 import Projects from './Projects'
-import Home from './Home'
+import About from './About'
 import NoPage from './NoPage'
 import RandomImagePage from './RandomImagePage'
 
 export {
   Navbar,
   Projects,
-  Home,
+  About,
   NoPage,
   RandomImagePage,
 }

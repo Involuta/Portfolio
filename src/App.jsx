@@ -19,7 +19,7 @@ function App() {
 export default App
 */
 
-import { Home, NoPage, RandomImagePage } from './components'
+import { Projects, About, NoPage, RandomImagePage } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -27,8 +27,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home/>}/>
-        <Route path='/home' element={<Home/>}/>
+        <Route index element={<Projects/>}/>
+        <Route path='/projects' element={<Projects/>}/>
+        <Route path='/about' element={<About/>}/>
         <Route path='/random-image' element={<RandomImagePage/>}/>
         <Route path='*' element={<NoPage/>}/>
       </Routes>
