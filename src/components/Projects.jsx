@@ -127,7 +127,7 @@ import { projects } from '../constants'
 // import { fadeIn, textVariant } from '../utils/motion'
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => (
-  <div class="card bg-dark text-white border-0 rounded-3 shadow-sm" style={{ width: '22rem' }}>
+  <div class="card bg-dark text-white border-0 rounded-3 shadow-sm">
     <div>
       <img src={image} alt={name} class="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
       <div class="top-0 end-0 m-3">
@@ -164,27 +164,27 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Projects = () => {
   return (
-    <>
-      <motion.div>
+    <div class="container-fluid">
+      <div>
         <p class="text-muted">My work</p>
         <h2 class="fw-bold">Projects</h2>
-      </motion.div>
+      </div>
 
-      <div class="container">
+      <div>
         <motion.p class="mt-3 text-secondary fs-5">
           This is a sentence about how my projects showcase my skills and experience through real-world examples of my work.
         </motion.p>
       </div>
 
-      <div class="row justify-content-md-center">
+      <div class="d-flex row justify-content-center border border-danger">
         {projects.map((project, index) => (
-          <div key={`project-${index}`} class="col-lg-4 col-md-6">
+          <div key={`project-${index}`} class="col-md-4">
             <ProjectCard index={index} {...project} />
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
-export default SectionWrapper(Projects, '')
+export default Projects

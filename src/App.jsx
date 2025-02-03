@@ -20,14 +20,14 @@ export default App
 */
 
 import { Navbar, Projects } from './components'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Projects />
-    </div>
+    </>
   )
 }
 
