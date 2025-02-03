@@ -130,7 +130,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
   <div class="card bg-dark text-white border-0 rounded-3 shadow-sm">
     <div>
       <img src={image} alt={name} class="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
-      <div class="top-0 end-0 m-3">
+      <div class="m-3">
         <div
           onClick={() => window.open(source_code_link, '_blank')}
           class="bg-black text-white d-flex justify-content-center align-items-center rounded-circle"
@@ -164,7 +164,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Projects = () => {
   return (
-    <div class="container-fluid">
+    <div>
       <div>
         <p class="text-muted">My work</p>
         <h2 class="fw-bold">Projects</h2>
@@ -176,9 +176,9 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div class="d-flex row justify-content-center border border-danger">
+      <div class="d-flex row justify-content-center">
         {projects.map((project, index) => (
-          <div key={`project-${index}`} class="col-md-4">
+          <div key={`project-${index}`} class="col-lg-4">
             <ProjectCard index={index} {...project} />
           </div>
         ))}
@@ -187,4 +187,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default SectionWrapper(Projects, '')
