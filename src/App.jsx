@@ -19,15 +19,19 @@ function App() {
 export default App
 */
 
-import { Navbar, Projects } from './components'
+import { Home, NoPage } from './components'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Projects />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home/>}/>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='*' element={<NoPage/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

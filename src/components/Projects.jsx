@@ -127,33 +127,33 @@ import { projects } from '../constants'
 // import { fadeIn, textVariant } from '../utils/motion'
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => (
-  <div class="card bg-dark text-white border-0 rounded-3 shadow-sm">
+  <div className="card bg-dark text-white border-0 rounded-3 shadow-sm">
     <div>
-      <img src={image} alt={name} class="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
-      <div class="m-3">
+      <img src={image} alt={name} className="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
+      <div className="m-3">
         <div
           onClick={() => window.open(source_code_link, '_blank')}
-          class="bg-black text-white d-flex justify-content-center align-items-center rounded-circle"
+          className="bg-black text-white d-flex justify-content-center align-items-center rounded-circle"
           style={{ width: '40px', height: '40px', cursor: 'pointer' }}
         >
           <img
               src={github}
               alt='github'
-              class='w-100 h-100'
+              className='w-100 h-100'
           />
         </div>
       </div>
     </div>
 
-    <div class="card-body">
-      <h5 class="fw-bold">{name}</h5>
-      <p class="text-secondary">{description}</p>
+    <div className="card-body">
+      <h5 className="fw-bold">{name}</h5>
+      <p className="text-secondary">{description}</p>
     </div>
 
-    <div class="card-footer bg-transparent border-0">
-      <div class="d-flex flex-wrap gap-2">
+    <div className="card-footer bg-transparent border-0">
+      <div className="d-flex flex-wrap gap-2">
         {tags.map((tag) => (
-          <span key={tag.name} class={`badge ${tag.color}`}>
+          <span key={tag.name} className={`badge ${tag.color}`}>
             #{tag.name}
           </span>
         ))}
@@ -166,19 +166,19 @@ const Projects = () => {
   return (
     <div>
       <div>
-        <p class="text-muted">My work</p>
-        <h2 class="fw-bold">Projects</h2>
+        <p className="text-muted">My work</p>
+        <h2 className="fw-bold">Projects</h2>
       </div>
 
       <div>
-        <motion.p class="mt-3 text-secondary fs-5">
+        <motion.p className="mt-3 text-secondary fs-5">
           This is a sentence about how my projects showcase my skills and experience through real-world examples of my work.
         </motion.p>
       </div>
 
-      <div class="d-flex row justify-content-center">
+      <div className="d-flex row justify-content-center">
         {projects.map((project, index) => (
-          <div key={`project-${index}`} class="col-lg-4">
+          <div key={`project-${index}`} className="col-lg-4">
             <ProjectCard index={index} {...project} />
           </div>
         ))}
