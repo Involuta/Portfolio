@@ -25,7 +25,14 @@ import {
   threejs,
 } from "../assets";
 
-export const navLinks = [
+const about_me = [
+  {
+    title: "Hi, I'm Ryan! I'm passionate about Web Dev, AI, and Game Dev.",
+    description: "Boom boom pow. O goodness golly i need a lot of text but don't know where to get it from. O goodness golly i need a lot of text but don't know where to get it from. O goodness golly i need a lot of text but don't know where to get it from. O goodness golly i need a lot of text but don't know where to get it from. O goodness golly i need a lot of text but don't know where to get it from."
+  }
+]
+
+const navLinks = [
   {
     id: "about",
     title: "About",
@@ -262,4 +269,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { about_me, navLinks, services, technologies, experiences, testimonials, projects };

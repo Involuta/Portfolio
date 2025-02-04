@@ -23,14 +23,16 @@ const RandomImage = () => {
   }, []);
 
   return (
-    <div className='container-fluid'>
-      <div className="row align-items-center">
-        <div className='col'>
-          <h2 className=''>Random Image</h2>
-          <button className='' onClick={fetchImage}>Get New Image</button>
-        </div>
-        <div className='col'>
-          {imageUrl && <img src={imageUrl} alt={imageAlt} width="300" />}
+    <div className='jumbotron jumbotron-fluid'>
+      <div className='container'>
+        <div className="row align-items-center">
+          <div className='col'>
+            <h2 className='display-4'>Random Image</h2>
+            <button className='' onClick={fetchImage}>Get New Image</button>
+          </div>
+          <div className='col lead'>
+            {imageUrl && <img src={imageUrl} alt={imageAlt} width="300" />}
+          </div>
         </div>
       </div>
     </div>
