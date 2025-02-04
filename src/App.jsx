@@ -27,7 +27,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Projects/>}/>
+        <Route index element={<SingleProject/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='project-NART' element={<SingleProject/>}/>

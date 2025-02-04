@@ -205,9 +205,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "NART",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web interface for communicating with petfinding drone. Submit images of your pet, and the drone's onboard detection model will notify you of potential matches as it searches its proximity.",
     tags: [
       {
         name: "react",
@@ -223,7 +223,7 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/TanveenBal/NART",
   },
   {
     name: "Job IT",
