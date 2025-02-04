@@ -24,14 +24,14 @@ const RandomImage = () => {
 
   return (
     <div className='jumbotron jumbotron-fluid'>
-      <div className='container'>
+      <div className='container vw-100'>
         <div className="row align-items-center">
-          <div className='col'>
-            <h2 className='display-4'>Random Image</h2>
+          <div className='col-6 d-flex flex-column justify-content-center'>
+            <h2 className='display-4 py-5'>Here's a Random Image from Unsplash</h2>
             <button className='' onClick={fetchImage}>Get New Image</button>
           </div>
-          <div className='col lead'>
-            {imageUrl && <img src={imageUrl} alt={imageAlt} width="300" />}
+          <div className='col-6 d-flex justify-content-center'>
+            {imageUrl && <img src={imageUrl} alt={imageAlt} className='col-8'/>}
           </div>
         </div>
       </div>

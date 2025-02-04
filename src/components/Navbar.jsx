@@ -23,7 +23,8 @@ const Navbar = () => {
                 className={`nav-link ${
                   active === link.title ? "text-white fw-bold" : "text-secondary fw-normal"
                 }`}
-                onClick={() => setActive(link.title)}
+                onMouseEnter={() => setActive(link.title)}
+                onMouseLeave={() => setActive("")}
               >
                 {link.title}
               </a>

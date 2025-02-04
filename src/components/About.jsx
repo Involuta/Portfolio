@@ -1,7 +1,6 @@
 import { about_me } from '../constants'
 import { profile_pic } from '../assets'
 import { SectionWrapper } from '../hoc'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 const About = () => {
   return (
