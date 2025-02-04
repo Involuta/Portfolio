@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import { SectionWrapper } from '../hoc'
 
 const RandomImage = () => {
   const [imageUrl, setImageUrl] = useState("")
@@ -43,4 +44,4 @@ const RandomImagePage = () => {
   )
 }
 
-export default RandomImagePage
+export default SectionWrapper(RandomImagePage, '')

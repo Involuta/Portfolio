@@ -10,7 +10,7 @@ const SectionWrapper = (Component, idName) =>
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="justify-content-center px-5 py-5 m-5"
+          className="d-flex px-5 py-5 m-5"
         >
           <span id={idName}>
             &nbsp;
