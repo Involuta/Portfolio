@@ -30,6 +30,8 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import profile_pic from './PFP_small.jpeg'
+
 export {
   logo,
   backend,
@@ -59,4 +61,6 @@ export {
   carrent,
   jobit,
   tripguide,
+
+  profile_pic
 };
