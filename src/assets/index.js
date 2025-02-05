@@ -31,6 +31,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 import profile_pic from './PFP_small.jpeg'
+import landscape_pic from './Avatar.png'
 
 export {
   logo,
@@ -62,5 +63,6 @@ export {
   jobit,
   tripguide,
 
-  profile_pic
+  profile_pic,
+  landscape_pic
 };
