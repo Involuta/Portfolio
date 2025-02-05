@@ -1,7 +1,7 @@
 import { landscape_pic } from '../assets'
 import { Navbar } from '../components'
 
-const SingleProject = () => {
+const SingleProject = ({title, summary}) => {
   return (
     <div>
       <Navbar/>
@@ -11,7 +11,7 @@ const SingleProject = () => {
           className='vw-100 vh-100 object-fit-cover'
         />
         <h1 className="position-absolute bottom-0 text-white p-4 bg-dark bg-opacity-50">
-          NART: The Petfinder Drone
+          {title}
         </h1>
       </div>
       <div className='m-5 px-lg-5'>
@@ -19,7 +19,7 @@ const SingleProject = () => {
           Summary
         </h1>
         <p>
-          The user needs to upload their pics to the app. The app sends the pics to the drone's onboard object detection model. The model will send a notification back to the web app when a potential match for the pet is found.
+          {summary}
         </p>
       </div>
     </div>

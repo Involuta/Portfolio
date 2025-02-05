@@ -21,6 +21,7 @@ export default App
 
 import { Projects, About, NoPage, RandomImagePage, SingleProject } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { projects } from './constants'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -30,8 +31,8 @@ function App() {
         <Route index element={<SingleProject/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='project-NART' element={<SingleProject/>}/>
-        <Route path='project-MIPS' element={<SingleProject/>}/>
+        <Route path='project-NART' element={<SingleProject {...projects[0]}/>}/>
+        <Route path='project-MIPS' element={<SingleProject {...projects[1]}/>}/>
         <Route path='/random-image' element={<RandomImagePage/>}/>
         <Route path='*' element={<NoPage/>}/>
       </Routes>
