@@ -253,6 +253,7 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
+    project_page_link: "project-FAKE",
     title: "Trip Guide",
     summary:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",

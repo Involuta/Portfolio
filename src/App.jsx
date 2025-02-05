@@ -31,8 +31,9 @@ function App() {
         <Route index element={<SingleProject/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='project-NART' element={<SingleProject {...projects[0]}/>}/>
-        <Route path='project-MIPS' element={<SingleProject {...projects[1]}/>}/>
+        {projects.map((project, _) => (
+          <Route path={project.project_page_link} element={<SingleProject {...project}/>}/>
+        ))}
         <Route path='/random-image' element={<RandomImagePage/>}/>
         <Route path='*' element={<NoPage/>}/>
       </Routes>
