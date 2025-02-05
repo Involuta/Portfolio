@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { SectionWrapper } from '../hoc'
+import { Navbar } from '../components'
 
 const RandomImage = () => {
   const [imageUrl, setImageUrl] = useState("")
@@ -24,7 +24,7 @@ const RandomImage = () => {
 
   return (
     <div className='jumbotron jumbotron-fluid'>
-      <div className='container vw-100'>
+      <div className='p-5 m-5 vw-100'>
         <div className="row align-items-center">
           <div className='col-6 d-flex flex-column justify-content-center'>
             <h2 className='display-4 py-5'>Here's a Random Image from Unsplash</h2>
@@ -42,8 +42,11 @@ const RandomImage = () => {
 
 const RandomImagePage = () => {
   return (
-    <RandomImage/>
+    <>
+      <Navbar/>
+      <RandomImage/>
+    </>
   )
 }
-
-export default SectionWrapper(RandomImagePage, '')
+// No SectionWrapper here; by removing the padding & margin, the vw-100 tag can be used while still centering the elements
+export default RandomImagePage

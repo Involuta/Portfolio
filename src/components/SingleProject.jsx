@@ -1,12 +1,14 @@
 import { profile_pic } from '../assets'
-import { SectionWrapper } from '../hoc'
+import { Navbar } from '../components'
 
 const SingleProject = () => {
   return (
-    <div className='vw-100'>
-      <img src={profile_pic}/>
+    <div className='vw-100 d-flex justify-content-center border border-primary'>
+      <Navbar/>
+      <img src={profile_pic} className=''/>
     </div>
   )
 }
 
-export default SectionWrapper(SingleProject, '')
+// No SectionWrapper so that the image can stretch across entire screen
+export default SingleProject
