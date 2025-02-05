@@ -31,6 +31,7 @@ function App() {
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='project-NART' element={<SingleProject/>}/>
+        <Route path='project-MIPS' element={<SingleProject/>}/>
         <Route path='/random-image' element={<RandomImagePage/>}/>
         <Route path='*' element={<NoPage/>}/>
       </Routes>

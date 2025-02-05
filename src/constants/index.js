@@ -205,20 +205,23 @@ const testimonials = [
 
 const projects = [
   {
-    name: "NART",
-    description:
-      "Web interface for communicating with petfinding drone. Submit images of your pet, and the drone's onboard detection model will notify you of potential matches as it searches its proximity.",
+    project_page_link: "project-NART",
+    title: "NART: The Petfinder Drone",
+    summary:
+      "Web interface for communicating with petfinding drone. Submit images of your pet, and the drone's onboard detection model will notify you of potential matches as it searches its proximity. The user needs to upload their pics to the app. The app sends the pics to the drone's onboard object detection model. The model will send a notification back to the web app when a potential match for the pet is found.",
+    my_role:
+      "I created the web app and set up communications between the web app and drone.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "bootstrap",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "pytorch",
         color: "pink-text-gradient",
       },
     ],
@@ -226,45 +229,27 @@ const projects = [
     source_code_link: "https://github.com/TanveenBal/NART",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    project_page_link: "project-MIPS",
+    title: "MIPS 32 Pipelined Processor",
+    summary:
+      "A MIPS 32 processor designed in the Vivado Design Suite using Verilog code.",
+    my_role:
+      "I wrote all code and tested all components using signal timelines in Vivado.",
     tags: [
       {
-        name: "react",
+        name: "verilog",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "vivado",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "computer-architecture",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
     source_code_link: "https://github.com/",
   },
 ];

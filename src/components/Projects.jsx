@@ -126,38 +126,25 @@ import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 // import { fadeIn, textVariant } from '../utils/motion'
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => (
+const ProjectCard = ({ index, project_page_link, title, summary, tags, image, source_code_link }) => (
   <div className="card bg-dark text-white border-0 rounded-3 shadow-sm mb-5">
     <div>
-      <img src={image} alt={name} className="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
-      <div className="m-3">
-        <div
-          onClick={() => window.open(source_code_link, '_blank')}
-          className="bg-black text-white d-flex justify-content-center align-items-center rounded-circle"
-          style={{ width: '40px', height: '40px', cursor: 'pointer' }}
-        >
-          <img
-              src={github}
-              alt='github'
-              className='w-100 h-100'
-          />
-        </div>
+      <img src={image} alt={title} className="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
+      <div className="m-3 align-items-center">
       </div>
     </div>
 
     <div className="card-body">
-      <h5 className="fw-bold">{name}</h5>
-      <p className="text-secondary">{description}</p>
-    </div>
-
-    <div className="card-footer bg-transparent border-0">
-      <div className="d-flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span key={tag.name} className={`badge ${tag.color}`}>
-            #{tag.name}
-          </span>
-        ))}
+      <h5 className="fw-bold">{title}</h5>
+      <div>
+        <h6 className='flex-row'>
+          {tags.map(tag => `#${tag.name}`).join(', ')}
+        </h6>
       </div>
+      <p className="text-secondary">{summary}</p>
+      <a className='' href={`${project_page_link}`}>
+        Go to project page
+      </a>
     </div>
   </div>
 )
@@ -166,8 +153,8 @@ const Projects = () => {
   return (
     <div>
       <div>
-        <p className="text-muted">My work</p>
-        <h2 className="fw-bold">Projects</h2>
+        <p className="text-muted">Ryan Bascos</p>
+        <h1 className="fw-bold">Projects</h1>
       </div>
 
       <div>
