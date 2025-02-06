@@ -33,6 +33,10 @@ import tripguide from "./tripguide.png";
 import profile_pic from './PFP_small.jpeg'
 import landscape_pic from './Avatar.png'
 
+import MIPS_schematic from './MIPS_schematic.png'
+import Early_NART_UI from './Early_NART_UI.webp'
+import DAE_notebook from './DAE_notebook.png'
+
 export {
   logo,
   backend,
@@ -64,5 +68,9 @@ export {
   tripguide,
 
   profile_pic,
-  landscape_pic
+  landscape_pic,
+
+  MIPS_schematic,
+  Early_NART_UI,
+  DAE_notebook,
 };

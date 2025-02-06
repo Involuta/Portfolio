@@ -1,25 +1,33 @@
 import { landscape_pic } from '../assets'
 import { Navbar } from '../components'
 
-const SingleProject = ({title, summary}) => {
+const SingleProject = ({title, summary, my_role, image}) => {
   return (
     <div>
       <Navbar/>
       <div>
-        <img 
-          src={landscape_pic} 
-          className='vw-100 vh-100 object-fit-cover'
-        />
-        <h1 className="position-absolute bottom-0 text-white p-4 bg-dark bg-opacity-50">
+        <h1 className='text-center fw-bold py-5 mt-5 align-items-center'>
           {title}
         </h1>
       </div>
-      <div className='m-5 px-lg-5'>
-        <h1 className='mb-3'>
+      <div>
+        <img 
+          src={image} 
+          className='vw-100 vh-75 border border-bottom object-fit-scale'
+        />
+      </div>
+      <div className='ml-3 my-5 px-lg-5'>
+        <h2 className='mb-3'>
           Summary
-        </h1>
+        </h2>
         <p>
           {summary}
+        </p>
+        <h2 className='mb-3'>
+          My Role
+        </h2>
+        <p>
+          {my_role}
         </p>
       </div>
     </div>

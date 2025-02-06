@@ -27,8 +27,9 @@ const RandomImage = () => {
       <div className='p-5 m-5 vw-100'>
         <div className="row align-items-center">
           <div className='col-6 d-flex flex-column justify-content-center'>
-            <h2 className='display-4 py-5'>Here's a Random Image from Unsplash</h2>
-            <button className='' onClick={fetchImage}>Get New Image</button>
+            <h2 className='display-4'>Here's a Random Image from Unsplash</h2>
+            <h5 clasName='display-4'>If no image appears, you've hit the API rate limit.</h5>
+            <button className='mt-5' onClick={fetchImage}>Get New Image</button>
           </div>
           <div className='col-6 d-flex justify-content-center'>
             {imageUrl && <img src={imageUrl} alt={imageAlt} className='col-8'/>}

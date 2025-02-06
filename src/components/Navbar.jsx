@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-sm fixed-top bg-dark py-3">
+    <nav className="navbar navbar-expand-sm fixed-top bg-dark py-3 mb-4">
       <div className="container d-flex justify-content-center align-items-center">
         {/* Logo */}
         

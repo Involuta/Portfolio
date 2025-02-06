@@ -142,9 +142,9 @@ const ProjectCard = ({ index, project_page_link, title, summary, tags, image, so
         </h6>
       </div>
       <p className="text-secondary">{summary}</p>
-      <a className='' href={`${project_page_link}`}>
-        Go to project page
-      </a>
+        <a className='text-white' href={`${project_page_link}`}>
+          Go to project page
+        </a>
     </div>
   </div>
 )

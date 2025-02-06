@@ -23,6 +23,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  MIPS_schematic,
+  Early_NART_UI,
+  DAE_notebook,
 } from "../assets";
 
 const about_me = [
@@ -225,7 +228,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: Early_NART_UI,
     source_code_link: "https://github.com/TanveenBal/NART",
   },
   {
@@ -249,29 +252,31 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: MIPS_schematic,
     source_code_link: "https://github.com/",
   },
   {
-    project_page_link: "project-FAKE",
-    title: "Trip Guide",
+    project_page_link: "project-DAE",
+    title: "Denoising Autoencoder for Vehicle Trajectory Data",
     summary:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A denoising autoencoder designed to smooth time-series vehicle trajectory data.",
+    my_role:
+      "I created the model using PyTorch and displayed its results using matplotlib graphs and Google Colab notebooks.",
     tags: [
       {
-        name: "nextjs",
+        name: "pytorch",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "colab-notebooks",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "data-processing",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: DAE_notebook,
     source_code_link: "https://github.com/",
   },
 ];
