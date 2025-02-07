@@ -22,6 +22,7 @@ import {
   carrent,
   jobit,
   tripguide,
+  profile_pic,
   threejs,
   MIPS_schematic,
   Early_NART_UI,
@@ -30,8 +31,8 @@ import {
 
 const about_me = [
   {
-    title: "Hi, I'm Ryan! I'm passionate about Web Dev, AI, and Game Dev.",
-    description: "Boom boom pow. O goodness golly i need a lot of text but don't know where to get it from. O goodness golly i need a lot of text but don't know where to get it from. O goodness golly i need a lot of text but don't know where to get it from. O goodness golly i need a lot of text but don't know where to get it from. O goodness golly i need a lot of text but don't know where to get it from."
+    title: "Hi, I'm Ryan! I'm passionate about Web Dev, AI, and Electronics.",
+    description: "I'm a Computer Science and Engineering student at UCI and an aspiring web developer. I'd love to find more opportunities for software and/or hardware development."
   }
 ]
 

@@ -30,7 +30,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
-import profile_pic from './PFP_small.jpeg'
+import profile_pic from './PFP_Small.jpeg'
 import landscape_pic from './Avatar.png'
 
 import MIPS_schematic from './MIPS_schematic.png'
