@@ -5,20 +5,33 @@ const RandomImage = () => {
   const [imageUrl, setImageUrl] = useState("")
   const [imageAlt, setImageAlt] = useState("")
 
+  const getUnsplashURL = async () => {
+    try {
+      const response = await fetch("https://portfolio-3t42.onrender.com/api/message")
+      const responseJSON = await response.json()
+      return responseJSON.message
+    }
+    catch(error) {
+      console.error("Error fetching data from Backend:", error)
+    }
+  }
+
   const fetchImage = async () => {
-    const response = await fetch("https://portfolio-3t42.onrender.com/api/message")
-      .then(response => response.json())  // Convert response to JSON
-      .then(response => {
-        console.log(response)       // Logs the entire JSON
-        console.log(response.urls.regular) // Logs the image URL
-        setImageUrl(response.urls.regular)
-        setImageAlt(response.alt_description)
-      })
-      .catch(error => console.error("Error fetching data:", error));
+    try {
+      const unsplashURL = await getUnsplashURL() // Wait for URL
+      const response = await fetch(unsplashURL)
+      const responseJSON = await response.json()
+      console.log(responseJSON.urls.regular) // Logs the image URL
+      setImageUrl(responseJSON.urls.regular)
+      setImageAlt(responseJSON.alt_description)
+    }
+    catch(error) {
+      console.error("Error fetching data from Unsplash:", error)
+    }
   };
 
   useEffect(() => {
-    fetchImage(); // Fetch image on component mount
+    fetchImage()
   }, []);
 
   return (
@@ -27,7 +40,7 @@ const RandomImage = () => {
         <div className="row align-items-center">
           <div className='col-6 d-flex flex-column justify-content-center'>
             <h2 className='display-4'>Here's a Random Image from Unsplash</h2>
-            <h5 clasName='display-4'>If no image appears, you've hit the API rate limit.</h5>
+            <h5 className=''>If no image appears, you've hit the API rate limit.</h5>
             <button className='mt-5' onClick={fetchImage}>Get New Image</button>
           </div>
           <div className='col-6 d-flex justify-content-center'>
