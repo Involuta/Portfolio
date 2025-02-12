@@ -19,7 +19,7 @@ function App() {
 export default App
 */
 
-import { Projects, About, NoPage, RandomImagePage, SingleProject } from './components'
+import { Projects, About, NoPage, RandomImagePage, SingleProject, BackendTest } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { projects } from './constants'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -29,6 +29,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Projects/>}/>
+        <Route path='/backend' element={<BackendTest/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/about' element={<About/>}/>
         {projects.map((project, index) => (

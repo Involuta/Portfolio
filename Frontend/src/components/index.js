@@ -4,6 +4,7 @@ import About from './About'
 import NoPage from './NoPage'
 import RandomImagePage from './RandomImagePage'
 import SingleProject from './SingleProject'
+import BackendTest from './BackendTest'
 
 export {
   Navbar,
@@ -12,4 +13,5 @@ export {
   NoPage,
   RandomImagePage,
   SingleProject,
+  BackendTest,
 }
