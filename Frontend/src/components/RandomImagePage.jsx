@@ -6,7 +6,7 @@ const RandomImage = () => {
   const [imageAlt, setImageAlt] = useState("")
 
   const fetchImage = async () => {
-    const response = await fetch("https://api.unsplash.com/photos/random?client_id=fU8TlbPbAok05eTaawq4qZgU7NlrCmafc4qaY2TM9ZU")
+    const response = await fetch("https://portfolio-3t42.onrender.com/api/message")
       .then(response => response.json())  // Convert response to JSON
       .then(response => {
         console.log(response)       // Logs the entire JSON

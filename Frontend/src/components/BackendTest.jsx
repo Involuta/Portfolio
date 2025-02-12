@@ -4,7 +4,7 @@ const BackendTest = () => {
   const [message, setMessage] = useState('Loading...');
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/message')
+    fetch("https://portfolio-3t42.onrender.com/api/message")
       .then(response => response.json())
       .then(data => setMessage(data.message))
       .catch(error => console.error('Error fetching message:', error));
