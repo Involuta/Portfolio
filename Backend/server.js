@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 
 app.get('/api/message', (req, res) => {
-    res.json({ message: process.env.UNSPLASH_API_KEY || "Default backend message" });
+    res.json({ message: process.env.UNSPLASH_API_KEY || "Default backend message", testResponse: "Hi" });
 });
 
 app.listen(PORT, () => {
