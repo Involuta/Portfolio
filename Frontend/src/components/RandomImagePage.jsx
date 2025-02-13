@@ -7,7 +7,7 @@ const RandomImage = () => {
 
   const getUnsplashURL = async () => {
     try {
-      const response = await fetch("https://portfolio-3t42.onrender.com/api/message")
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}`)
       const responseJSON = await response.json()
       return responseJSON.message
     }
