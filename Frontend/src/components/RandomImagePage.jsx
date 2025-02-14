@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar } from '../components'
+import { heroBG, simple_green_bg, triangle_green_bg } from '../assets'
 
 const RandomImage = () => {
   const [imageUrl, setImageUrl] = useState("")
@@ -35,13 +36,19 @@ const RandomImage = () => {
   }, []);
 
   return (
-    <div className='jumbotron jumbotron-fluid'>
+    <div className='align-items-center'
+      style={{
+        backgroundImage: `url(${simple_green_bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh", // Full height
+      }}>
       <div className='p-5 m-5 vw-100'>
         <div className="row align-items-center">
-          <div className='col-6 d-flex flex-column justify-content-center'>
-            <h2 className='display-4'>Here's a Random Image from Unsplash</h2>
-            <h5 className=''>If no image appears, you've hit the API rate limit.</h5>
-            <button className='mt-5' onClick={fetchImage}>Get New Image</button>
+          <div className='col-6 d-flex flex-column justify-content-center bg-dark bg-opacity-50 p-5'>
+            <h2 className='display-4 text-white'>Here's a Random Image from Unsplash</h2>
+            <h5 className='text-white'>If no image appears, you've hit the API rate limit.</h5>
+            <button className='mt-5 bg-light text-dark' onClick={fetchImage}>Get New Image</button>
           </div>
           <div className='col-6 d-flex justify-content-center'>
             {imageUrl && <img src={imageUrl} alt={imageAlt} className='col-8'/>}

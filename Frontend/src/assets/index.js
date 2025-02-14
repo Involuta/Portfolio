@@ -38,6 +38,10 @@ import Early_NART_UI from './Early_NART_UI.webp'
 import NART_WhiteUI from './NART_WhiteUI.png'
 import DAE_notebook from './DAE_notebook.png'
 
+import heroBG from './herobg.webp'
+import simple_green_bg from './simple_green_bg.webp'
+import triangle_green_bg from './triangle_green_bg.webp'
+
 export {
   logo,
   backend,
@@ -75,4 +79,8 @@ export {
   Early_NART_UI,
   DAE_notebook,
   NART_WhiteUI,
+
+  heroBG,
+  simple_green_bg,
+  triangle_green_bg,
 };

@@ -9,11 +9,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-sm fixed-top bg-dark py-3 mb-4">
-      <div className="container d-flex justify-content-center align-items-center">
-        {/* Logo */}
-        
-
+    <nav className="navbar navbar-expand-sm fixed-top bg-primary py-3 mb-4">
+      <div className="container lead d-flex justify-content-center align-items-center">
         {/* Desktop Nav */}
         <ul className="navbar-nav d-none d-sm-flex flex-row gap-20">
           {navLinks.map((link) => (
@@ -21,7 +18,7 @@ const Navbar = () => {
               <a
                 href={`${link.id}`}
                 className={`nav-link ${
-                  active === link.title ? "text-white fw-bold" : "text-secondary fw-normal"
+                  active === link.title ? "text-white text-small fw-bold" : "text-white fw-normal"
                 }`}
                 onMouseEnter={() => setActive(link.title)}
                 onMouseLeave={() => setActive("")}
@@ -56,14 +53,12 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <li key={link.id} className="nav-item">
                 <a
-                  href={`#${link.id}`}
+                  href={`${link.id}`}
                   className={`nav-link ${
-                    active === link.title ? "text-white" : "text-secondary"
+                    active === link.title ? "text-white" : "text-white"
                   } fw-medium`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
+                  onMouseEnter={() => setActive(link.title)}
+                  onMouseLeave={() => setActive("")}
                 >
                   {link.title}
                 </a>

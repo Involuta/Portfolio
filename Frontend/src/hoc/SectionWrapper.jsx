@@ -1,10 +1,17 @@
 import { motion } from 'framer-motion';
 import { Navbar } from '../components'
+import { heroBG, simple_green_bg, triangle_green_bg } from "../assets";
 
 const SectionWrapper = (Component, idName) =>
   function HOC() { // HOC stands for Higher-Order Component
     return (
-      <div> 
+      <div
+        style={{
+          backgroundImage: `url(${simple_green_bg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "100vh", // Full height
+      }}> 
         <Navbar/>
         <motion.section
           initial="hidden"
