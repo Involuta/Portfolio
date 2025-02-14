@@ -45,14 +45,26 @@ const RandomImage = () => {
         backgroundPosition: "center",
         height: "100vh",
       }}>
-      <div className='p-5 m-5 vw-100'>
-        <div className="row align-items-center">
+      <div className='p-5 m-lg-5 vw-100'>
+        {/*Large Screens; d-none d-lg-flex means this only shows up on large screens*/}
+        <div className="d-none d-lg-flex row align-items-center">
           <div className='col-6 d-flex flex-column justify-content-center bg-black border bg-opacity-50 p-5'>
             <h2 className='display-4 text-white'>Here's a Random Image from Unsplash</h2>
             <h5 className='text-white pt-2'>If no image appears, wait around 50 seconds as the Backend spins up. If still nothing shows up, you've hit the API rate limit.</h5>
             <button className='mt-5 bg-light text-dark' onClick={fetchImage}>Get New Image</button>
           </div>
           <div className='col-6 d-flex justify-content-center'>
+            {imageUrl && <img src={imageUrl} alt={imageAlt} className='col-8'/>}
+          </div>
+        </div>
+        {/*Small Screens; d-lg-none means this does not show up on large screens and shows up otherwise*/}
+        <div className="d-lg-none align-items-center">
+          <div className='d-flex flex-column justify-content-center bg-black border bg-opacity-50 p-5 mt-5'>
+            <h2 className='display-4 text-white'>Here's a Random Image from Unsplash</h2>
+            <h5 className='text-white pt-2'>If no image appears, wait around 50 seconds as the Backend spins up. If still nothing shows up, you've hit the API rate limit.</h5>
+            <button className='mt-5 bg-light text-dark' onClick={fetchImage}>Get New Image</button>
+          </div>
+          <div className='d-flex justify-content-center'>
             {imageUrl && <img src={imageUrl} alt={imageAlt} className='col-8'/>}
           </div>
         </div>

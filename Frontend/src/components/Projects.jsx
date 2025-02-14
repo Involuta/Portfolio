@@ -3,7 +3,7 @@ import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 
 const ProjectCard = ({ index, project_page_link, title, card_summary, tags, image, source_code_link }) => (
-  <div className="card bg-primary text-white border-0 rounded-3 shadow-sm mb-5">
+  <div className="card w-sm-100 bg-primary text-white border-0 rounded-3 shadow-sm mb-5">
     <div>
       <img src={image} alt={title} className="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
       <div className="m-3 align-items-center">

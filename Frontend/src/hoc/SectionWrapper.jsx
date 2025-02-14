@@ -6,7 +6,7 @@ const SectionWrapper = (Component, idName) =>
   function HOC() { // HOC stands for Higher-Order Component
     return (
       <div
-        className='bg-secondary'
+        className='bg-dark'
         style={{
           backgroundImage: `url(${simple_green_bg})`,
           backgroundSize: "cover",
@@ -19,7 +19,7 @@ const SectionWrapper = (Component, idName) =>
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="d-flex px-5 py-5 m-5"
+          className="d-flex px-5 py-5 m-lg-5 mt-5"
         >
           <span id={idName}>
             &nbsp;

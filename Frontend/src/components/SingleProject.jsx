@@ -24,7 +24,7 @@ const SingleProject = ({title, full_summary, my_role, image}) => {
           className='vw-100 vh-75 border border-bottom object-fit-scale'
         />
       </div>
-      <div className='ml-3 my-5 px-lg-5'>
+      <div className='mx-3 my-5 px-lg-5'>
         <h2 className='mb-3 text-white'>
           Summary
         </h2>
