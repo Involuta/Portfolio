@@ -127,7 +127,7 @@ import { projects } from '../constants'
 // import { fadeIn, textVariant } from '../utils/motion'
 
 const ProjectCard = ({ index, project_page_link, title, summary, tags, image, source_code_link }) => (
-  <div className="card bg-dark text-white border-0 rounded-3 shadow-sm mb-5">
+  <div className="card bg-primary text-white border-0 rounded-3 shadow-sm mb-5">
     <div>
       <img src={image} alt={title} className="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
       <div className="m-3 align-items-center">

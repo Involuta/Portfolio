@@ -35,6 +35,7 @@ import landscape_pic from './Avatar.png'
 
 import MIPS_schematic from './MIPS_schematic.png'
 import Early_NART_UI from './Early_NART_UI.webp'
+import NART_WhiteUI from './NART_WhiteUI.png'
 import DAE_notebook from './DAE_notebook.png'
 
 export {
@@ -73,4 +74,5 @@ export {
   MIPS_schematic,
   Early_NART_UI,
   DAE_notebook,
+  NART_WhiteUI,
 };

@@ -26,6 +26,7 @@ import {
   threejs,
   MIPS_schematic,
   Early_NART_UI,
+  NART_WhiteUI,
   DAE_notebook,
 } from "../assets";
 
@@ -229,7 +230,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: Early_NART_UI,
+    image: NART_WhiteUI,
     source_code_link: "https://github.com/TanveenBal/NART",
   },
   {
