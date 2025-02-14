@@ -7,6 +7,7 @@ const RandomImage = () => {
   const [imageAlt, setImageAlt] = useState("")
 
   const getUnsplashURL = async () => {
+    // Fetch Unsplash API URL from Backend; Backend URL comes from .env variable
     try {
       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}`)
       const responseJSON = await response.json()
@@ -18,11 +19,12 @@ const RandomImage = () => {
   }
 
   const fetchImage = async () => {
+    // Fetch Unsplash API URL from Backend, then use that URL to fetch an image from Unsplash
     try {
-      const unsplashURL = await getUnsplashURL() // Wait for URL
+      const unsplashURL = await getUnsplashURL()
       const response = await fetch(unsplashURL)
       const responseJSON = await response.json()
-      console.log(responseJSON.urls.regular) // Logs the image URL
+      console.log(responseJSON.urls.regular)
       setImageUrl(responseJSON.urls.regular)
       setImageAlt(responseJSON.alt_description)
     }
@@ -41,13 +43,13 @@ const RandomImage = () => {
         backgroundImage: `url(${simple_green_bg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "100vh", // Full height
+        height: "100vh",
       }}>
       <div className='p-5 m-5 vw-100'>
         <div className="row align-items-center">
-          <div className='col-6 d-flex flex-column justify-content-center bg-dark bg-opacity-50 p-5'>
+          <div className='col-6 d-flex flex-column justify-content-center bg-black border bg-opacity-50 p-5'>
             <h2 className='display-4 text-white'>Here's a Random Image from Unsplash</h2>
-            <h5 className='text-white'>If no image appears, you've hit the API rate limit.</h5>
+            <h5 className='text-white pt-2'>If no image appears, wait around 50 seconds as the Backend spins up. If still nothing shows up, you've hit the API rate limit.</h5>
             <button className='mt-5 bg-light text-dark' onClick={fetchImage}>Get New Image</button>
           </div>
           <div className='col-6 d-flex justify-content-center'>

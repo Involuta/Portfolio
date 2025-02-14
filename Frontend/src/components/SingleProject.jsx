@@ -1,14 +1,22 @@
-import { landscape_pic } from '../assets'
 import { Navbar } from '../components'
+import { simple_green_bg } from '../assets'
 
-const SingleProject = ({title, summary, my_role, image}) => {
+const SingleProject = ({title, full_summary, my_role, image}) => {
   return (
-    <div>
+    <div
+      className='bg-secondary'
+      style={{
+        backgroundImage: `url(${simple_green_bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh", // Full height
+      }}
+    >
       <Navbar/>
       <div>
-        <h1 className='text-center fw-bold py-5 mt-5 align-items-center'>
+        <h2 className='display-2 text-white text-center pt-5 pb-3 mt-5 align-items-center'>
           {title}
-        </h1>
+        </h2>
       </div>
       <div>
         <img 
@@ -17,16 +25,16 @@ const SingleProject = ({title, summary, my_role, image}) => {
         />
       </div>
       <div className='ml-3 my-5 px-lg-5'>
-        <h2 className='mb-3'>
+        <h2 className='mb-3 text-white'>
           Summary
         </h2>
-        <p>
-          {summary}
+        <p className='lead text-white'>
+          {full_summary}
         </p>
-        <h2 className='mb-3'>
-          My Role
+        <h2 className='mb-3 text-white'>
+          My Role + Skills Used
         </h2>
-        <p>
+        <p className='mb-5 pb-5 lead text-white'>
           {my_role}
         </p>
       </div>

@@ -1,12 +1,8 @@
-import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
-// import { styles } from '../styles'
-import { github } from '../assets'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
-// import { fadeIn, textVariant } from '../utils/motion'
 
-const ProjectCard = ({ index, project_page_link, title, summary, tags, image, source_code_link }) => (
+const ProjectCard = ({ index, project_page_link, title, card_summary, tags, image, source_code_link }) => (
   <div className="card bg-primary text-white border-0 rounded-3 shadow-sm mb-5">
     <div>
       <img src={image} alt={title} className="card-img-top rounded-top-3" style={{ height: '230px', objectFit: 'cover' }} />
@@ -21,7 +17,7 @@ const ProjectCard = ({ index, project_page_link, title, summary, tags, image, so
           {tags.map(tag => `#${tag.name}`).join(', ')}
         </h6>
       </div>
-      <p className="text-white">{summary}</p>
+      <p className="text-white">{card_summary}</p>
         <a className='text-white' href={`${project_page_link}`}>
           Go to project page
         </a>
@@ -33,8 +29,8 @@ const Projects = () => {
   return (
     <div>
       <div>
-        <p className="text-white">Ryan Bascos</p>
-        <h1 className="fw-bold text-white">Projects</h1>
+        <p className="lead text-white">Ryan Bascos</p>
+        <h1 className="text-white">Projects</h1>
       </div>
 
       <div>

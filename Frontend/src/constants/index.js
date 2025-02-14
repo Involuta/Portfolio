@@ -1,29 +1,4 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  profile_pic,
-  threejs,
   MIPS_schematic,
   Early_NART_UI,
   NART_WhiteUI,
@@ -33,7 +8,7 @@ import {
 const about_me = [
   {
     title: "Hi, I'm Ryan! I'm passionate about Web Dev, AI, and Electronics.",
-    description: "I'm a Computer Science and Engineering student at UCI and an aspiring web developer. I'd love to find more opportunities for software and/or hardware development."
+    description: "I'm a fourth year Computer Science and Engineering student at UCI, an AI enthusiast, and an aspiring web developer. I'm currently doing AI research for the OctoPath Lab at UCI, where I collect data on the performance of whole-slide image classification models in Python. I love to learn new things and branch out my knowledge of technology. I'd love to find more opportunities for research and become a more experienced software and/or hardware developer."
   }
 ]
 
@@ -52,170 +27,16 @@ const navLinks = [
   },
 ];
 
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
-];
-
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
-];
-
-const experiences = [
-  {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 const projects = [
   {
     project_page_link: "project-NART",
     title: "NART: The Petfinder Drone",
-    summary:
+    card_summary:
+      "Web app for communicating with petfinding drone.",
+    full_summary:
       "Web interface for communicating with petfinding drone. Submit images of your pet, and the drone's onboard detection model will notify you of potential matches as it searches its proximity. The user needs to upload their pics to the app. The app sends the pics to the drone's onboard object detection model. The model will send a notification back to the web app when a potential match for the pet is found.",
     my_role:
-      "I created the web app and set up communications between the web app and drone.",
+      "I created the web app using Vite, React, and Bootstrap. I set up communications between the web app and drone using Python sockets and PyTorch functions.",
     tags: [
       {
         name: "react",
@@ -236,10 +57,12 @@ const projects = [
   {
     project_page_link: "project-MIPS",
     title: "MIPS 32 Pipelined Processor",
-    summary:
+    card_summary:
       "A MIPS 32 processor designed in the Vivado Design Suite using Verilog code.",
+    full_summary:
+      "A MIPS 32 processor designed in the Vivado Design Suite using Verilog code. Interprets and executes assembly code. Comprised of 5 pipeline stages: instruction fetch (IF), instruction decode (ID), execute (EX), memory (MEM), and writeback (WB). Intermediary registers transfer data from one stage to the next at every clock cycle. Capable of hazard detection and resolution.",
     my_role:
-      "I wrote all code and tested all components using signal timelines in Vivado.",
+      "I used my knowledge of computer architecture and the Verilog language to create processor components and registers. I tested all components using signal timelines in Vivado.",
     tags: [
       {
         name: "verilog",
@@ -260,8 +83,10 @@ const projects = [
   {
     project_page_link: "project-DAE",
     title: "Denoising Autoencoder for Vehicle Trajectory Data",
-    summary:
+    card_summary:
       "A denoising autoencoder designed to smooth time-series vehicle trajectory data.",
+    full_summary:
+      "A denoising autoencoder designed to smooth time-series vehicle trajectory data. Created for a research project at the UCI Institute of Transportation Studies in association with the AI Club at UCI.",
     my_role:
       "I created the model using PyTorch and displayed its results using matplotlib graphs and Google Colab notebooks.",
     tags: [
@@ -283,4 +108,4 @@ const projects = [
   },
 ];
 
-export { about_me, navLinks, services, technologies, experiences, testimonials, projects };
+export { about_me, navLinks, projects };
