@@ -65,7 +65,7 @@ const RandomImage = () => {
             <button className='mt-5 bg-light text-dark' onClick={fetchImage}>Get New Image</button>
           </div>
           <div className='d-flex justify-content-center'>
-            {imageUrl && <img src={imageUrl} alt={imageAlt} className='col-8'/>}
+            {imageUrl && <img src={imageUrl} alt={imageAlt} className='col-12 mt-5'/>}
           </div>
         </div>
       </div>
