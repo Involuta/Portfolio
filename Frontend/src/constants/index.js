@@ -8,7 +8,7 @@ import {
 const about_me = [
   {
     title: "Hi, I'm Ryan! I'm passionate about Web Dev, AI, and Electronics.",
-    description: "I'm a fourth year Computer Science and Engineering student at UCI, an AI enthusiast, and an aspiring web developer. I'm currently doing AI research for the OctoPath Lab at UCI, where I collect data on the performance of whole-slide image classification models in Python. I love to learn new things and branch out my knowledge of technology. I'd love to find more opportunities for research and become a more experienced software and/or hardware developer."
+    description: "I’m a UC Irvine graduate with a B.S. in Computer Science and Engineering, passionate about software development and artificial intelligence. I’ve worked on backend and full-stack projects like Course Eater and Sunstone Cities, developing APIs, authentication systems, and cloud deployments using Node.js, React, Python, and MongoDB. My research experience includes building and evaluating machine learning models for image and trajectory data at UCI’s OctoPath Lab and Institute of Transportation Studies. My experience with electronics includes the AI-powered drone I programmed for my senior design project, equipped with object detection connected to a dynamic interface. I enjoy learning new technologies, tackling complex problems, and building tools that blend creativity, data, and intelligent design."
   }
 ]
 

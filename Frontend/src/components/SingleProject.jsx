@@ -4,13 +4,15 @@ import { simple_green_bg } from '../assets'
 const SingleProject = ({title, full_summary, my_role, image}) => {
   return (
     <div
-      className='bg-secondary'
-      style={{
-        backgroundImage: `url(${simple_green_bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "100vh", // Full height
-      }}
+    className="bg-secondary"
+    style={{
+      backgroundImage: `url(${simple_green_bg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      minHeight: "100vh", // ensures it fills screen but expands if needed
+    }}
     >
       <Navbar/>
       <div>
